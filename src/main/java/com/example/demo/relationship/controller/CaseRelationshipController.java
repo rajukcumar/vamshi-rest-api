@@ -7,18 +7,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.relationship.model.Case;
-import com.example.demo.relationship.repository.CaseRelationshipRepository;
+import com.example.demo.relationship.dto.CaseDetailsDto;
+import com.example.demo.relationship.service.CaseRelationshipService;
 
 @RestController
 @RequestMapping("api")
 public class CaseRelationshipController {
 
 @Autowired	
-private CaseRelationshipRepository caseRepo;	
+private CaseRelationshipService caseRelationshipService;	
 
 @RequestMapping("getCaseById")
-public ResponseEntity<Case> getCaseById(@RequestParam(name="caseid", required=true) Long caseId) {
-	return new ResponseEntity<>(caseRepo.findById(caseId).get(), HttpStatus.OK);
+public ResponseEntity<CaseDetailsDto> getCaseById(@RequestParam(name="caseid", required=true) Long caseId) {
+	return new ResponseEntity<>(caseRelationshipService.getCaseDetailsByCaseId(caseId), HttpStatus.OK);
 }
 }
