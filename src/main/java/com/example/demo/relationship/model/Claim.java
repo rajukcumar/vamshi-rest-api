@@ -1,5 +1,7 @@
 package com.example.demo.relationship.model;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -21,4 +23,20 @@ public class Claim  extends BaseCase{
 	@JsonFormat
 	private Long claimId;
 
+	@Column(name = "market_id")
+	@JsonFormat
+	private Long marketId;
+	
+	@Column(name = "product_id")
+	@JsonFormat
+	private Long productId;
+	
+
+	@JsonFormat(pattern = "yyyy-MM-dd")
+	@Column(name = "case_active_date")
+	private Date caseActiveDate;
+
+	@JsonFormat(pattern = "yyyy-MM-dd")
+	@Column(name = "case_expire_date")
+	private Date caseExpireDate;
 }

@@ -15,7 +15,7 @@ import lombok.Setter;
 @Data
 @Setter
 @Getter
-public class CaseDetailsDto implements Serializable {
+public class CaseDetailsDto extends BaseCaseDto {
 
 	@JsonFormat
 	private Long caseId;
@@ -23,13 +23,12 @@ public class CaseDetailsDto implements Serializable {
 	@JsonFormat
 	private Long sourceId;
 
-	@JsonFormat(pattern = "yyyy-MM-dd")
-
+	@JsonFormat(pattern = "DD/MM/YYYY")
 	private Date caseActiveDate;
 
-	@JsonFormat(pattern = "yyyy-MM-dd")
-
+	@JsonFormat(pattern = "DD/MM/YYYY")
 	private Date caseExpireDate;
+	
 	private List<ClaimDto> claimsDto;
 	private List<CaseClaimRelationshipDetailsDto> caseClaimRelationshipDetailsDto;
 

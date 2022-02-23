@@ -12,7 +12,7 @@ import lombok.Setter;
 @Data
 @Setter
 @Getter
-public class CaseClaimRelationshipDetailsDto implements Serializable {
+public class CaseClaimRelationshipDetailsDto extends BaseCaseDto {
 
 	@JsonFormat
 	private Long ccrId;

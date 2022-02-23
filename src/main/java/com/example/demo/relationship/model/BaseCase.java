@@ -14,6 +14,8 @@ import lombok.Data;
 @MappedSuperclass
 public class BaseCase implements Serializable {
 
+	private static final long serialVersionUID = -6275682075926550945L;
+
 	@JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
 	@Column(name = "row_create_date_ts")
 	private Date rowCreateDateTs;
