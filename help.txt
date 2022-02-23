@@ -8,6 +8,14 @@ insert into case_tab values(101,'2019-02-03 10:08:02',201,'2019-02-03 10:08:02',
 
 http://localhost:8080/current/getCurrentCaseRelationshipByCaseId?caseId=101
 
+Hibernate: create table case_claim_relationship (ccr_id bigint not null, row_change_date_ts timestamp, row_change_id bigint, row_create_date_ts timestamp, row_create_id bigint, ccr_active_date timestamp, ccr_expire_date timestamp, case_id bigint not null, claim_id bigint not null, primary key (ccr_id))
+Hibernate: create table case_tab (case_id bigint not null, row_change_date_ts timestamp, row_change_id bigint, row_create_date_ts timestamp, row_create_id bigint, case_active_date timestamp, case_expire_date timestamp, source_id bigint, primary key (case_id))
+Hibernate: create table claim (claim_id bigint not null, row_change_date_ts timestamp, row_change_id bigint, row_create_date_ts timestamp, row_create_id bigint, case_active_date timestamp, case_expire_date timestamp, market_id bigint, product_id bigint, primary key (claim_id))
+Hibernate: alter table case_claim_relationship add constraint FKohv7hde8muj1l4r3q7ilw7741 foreign key (case_id) references case_tab on delete cascade
+Hibernate: alter table case_claim_relationship add constraint FKdgyia9kunjgp21xhrhsuh9pbg foreign key (claim_id) references claim on delete cascade
+
+
+
 insert into case_tab values(101,'2019-02-03 10:08:02',201,'2019-02-03 10:08:02',301,'2019-02-03','2019-02-03',401)
 insert into claim values(10001,'2019-02-03 10:08:02',201,'2019-02-03 10:08:02',301,'2019-02-03','2019-02-03', 111,222)
 insert into case_claim_relationship values(1001,'2019-02-03 10:08:02',201,'2019-02-03 10:08:02',301,'2019-02-03','2019-02-03',101,10001)
