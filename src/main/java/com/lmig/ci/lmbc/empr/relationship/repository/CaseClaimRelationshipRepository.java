@@ -1,10 +1,10 @@
-package com.example.demo.relationship.repository;
+package com.lmig.ci.lmbc.empr.relationship.repository;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.example.demo.relationship.model.CaseClaimRelationship;
+import com.lmig.ci.lmbc.empr.relationship.model.CaseClaimRelationship;
 
 public interface CaseClaimRelationshipRepository extends JpaRepository<CaseClaimRelationship, Long> {
 

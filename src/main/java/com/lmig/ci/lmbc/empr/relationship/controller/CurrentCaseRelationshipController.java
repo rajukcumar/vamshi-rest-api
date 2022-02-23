@@ -1,4 +1,4 @@
-package com.example.demo.relationship.controller;
+package com.lmig.ci.lmbc.empr.relationship.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.relationship.dto.CaseDetailsDto;
-import com.example.demo.relationship.service.CaseRelationshipService;
+import com.lmig.ci.lmbc.empr.relationship.dto.CaseDetailsDto;
+import com.lmig.ci.lmbc.empr.relationship.service.CaseRelationshipService;
 
 @RestController
 @RequestMapping("current")

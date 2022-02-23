@@ -1,4 +1,4 @@
-package com.example.demo.relationship.dto;
+package com.lmig.ci.lmbc.empr.relationship.dto;
 
 import java.io.Serializable;
 import java.util.Date;
