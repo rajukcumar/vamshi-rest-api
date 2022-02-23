@@ -8,5 +8,5 @@ import com.example.demo.relationship.model.CaseClaimRelationship;
 
 public interface CaseClaimRelationshipRepository extends JpaRepository<CaseClaimRelationship, Long> {
 
-	List<CaseClaimRelationship> findByCaseId(Long caseId);
+	List<CaseClaimRelationship> findByCaseObjCaseId(Long caseId);
 }

@@ -39,13 +39,13 @@ public class CaseClaimRelationship extends BaseCase {
 	@Column(name = "ccr_expire_date")
 	private Date ccrExpireDate;
 	
-	@ManyToOne(fetch = FetchType.LAZY, optional = false)
+	 @ManyToOne(fetch = FetchType.LAZY, optional = false)
 	  @JoinColumn(name = "case_id", nullable = false)
 	  @OnDelete(action = OnDeleteAction.CASCADE)
 	  @JsonIgnore
 	  private Case caseObj;
 	
-	@ManyToOne(fetch = FetchType.LAZY, optional = false)
+	 @ManyToOne(fetch = FetchType.LAZY, optional = false)
 	  @JoinColumn(name = "claim_id", nullable = false)
 	  @OnDelete(action = OnDeleteAction.CASCADE)
 	  @JsonIgnore

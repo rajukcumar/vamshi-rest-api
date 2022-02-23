@@ -19,7 +19,7 @@ public class CurrentCaseRelationshipController {
 private CaseRelationshipService caseRelationshipService;	
 
 @RequestMapping(value="getCurrentCaseRelationshipByCaseId", method=RequestMethod.GET)
-public ResponseEntity<CaseDetailsDto> getCaseById(@RequestParam(name="caseid", required=true) Long caseId) {
+public ResponseEntity<CaseDetailsDto> getCaseById(@RequestParam(name="caseId", required=true) Long caseId) {
 	return new ResponseEntity<>(caseRelationshipService.getCaseDetailsByCaseId(caseId), HttpStatus.OK);
 }
 }

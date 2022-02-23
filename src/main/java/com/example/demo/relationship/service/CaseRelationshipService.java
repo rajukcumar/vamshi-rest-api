@@ -28,7 +28,7 @@ public class CaseRelationshipService {
 		if (caseObj != null) {
 			caseDetailsDto.setCaseId(caseObj.getCaseId());
 		}
-		List<CaseClaimRelationship> ccrRows = caseClaimRelationshipRepository.findByCaseId(caseId);
+		List<CaseClaimRelationship> ccrRows = caseClaimRelationshipRepository.findByCaseObjCaseId(caseId);
 		if (ccrRows != null && !ccrRows.isEmpty()) {
 			for (CaseClaimRelationship ccrRow : ccrRows) {
 				Claim cliam = claimRepository.findById(ccrRow.getClaimObj().getClaimId()).get();
