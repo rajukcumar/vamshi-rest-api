@@ -4,3 +4,12 @@ insert into case_tab values(101,'2019-02-03','2019-02-03 10:08:02',201,'2019-02-
 insert into case_tab values(101,'2019-02-03','2019-02-03 10:08:02',201,'2019-02-03 10:08:02',301,401)
 
 insert into case_tab values(101,'2019-02-03 10:08:02',201,'2019-02-03 10:08:02',301,'2019-02-03','2019-02-03',401)
+
+
+http://localhost:8080/current/getCurrentCaseRelationshipByCaseId?caseId=101
+
+insert into case_tab values(101,'2019-02-03 10:08:02',201,'2019-02-03 10:08:02',301,'2019-02-03','2019-02-03',401)
+
+insert into case_claim_relationship values(1001,'2019-02-03 10:08:02',201,'2019-02-03 10:08:02',301,'2019-02-03','2019-02-03',101,10001)
+
+insert into claim values(10001,'2019-02-03 10:08:02',201,'2019-02-03 10:08:02',301)
