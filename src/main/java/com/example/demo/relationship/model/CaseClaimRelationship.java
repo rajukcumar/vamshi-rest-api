@@ -16,8 +16,15 @@ import org.hibernate.annotations.OnDeleteAction;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
 @Entity
 @Table(name="case_claim_relationship")
+@Data
+@Setter
+@Getter
 public class CaseClaimRelationship extends BaseCase {
 
 	@Id
